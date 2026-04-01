@@ -1,5 +1,6 @@
 ai_context/
 build/
+.playground/
 
 # LaTeX
 *.aux

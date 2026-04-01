@@ -1,1 +1,50 @@
-% Add custom macros here
+% Common prose helpers.
+\newcommand{\eg}{e.g.\ }
+\newcommand{\ie}{i.e.\ }
+\newcommand{\etal}{et al.\ }
+\newcommand{\vs}{vs.\ }
+\newcommand{\code}[1]{\texttt{\detokenize{#1}}}
+\newcommand{\software}[1]{\textsc{#1}}
+
+% Reference shortcuts.
+\newcommand{\chapref}[1]{\Cref{#1}}
+\newcommand{\secref}[1]{\Cref{#1}}
+\newcommand{\subsecref}[1]{\Cref{#1}}
+\newcommand{\figref}[1]{\Cref{#1}}
+\newcommand{\tabref}[1]{\Cref{#1}}
+\newcommand{\eqnref}[1]{\cref{#1}}
+\newcommand{\appref}[1]{\Cref{#1}}
+
+% Math and statistics helpers.
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\mean}{\langle}{\rangle}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\sgn}{sgn}
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\order}[1]{\mathcal{O}\!\left(#1\right)}
+\newcommand{\chisq}{\chi^{2}}
+\newcommand{\ndf}{\mathrm{ndf}}
+\newcommand{\eff}{\varepsilon}
+\newcommand{\snr}{\mathrm{S/N}}
+\newcommand{\stat}{\text{stat.}}
+\newcommand{\syst}{\text{syst.}}
+
+% Common units used in detector and DAQ work.
+\newcommand{\eV}{\si{\electronvolt}}
+\newcommand{\keV}{\si{\kilo\electronvolt}}
+\newcommand{\MeV}{\si{\mega\electronvolt}}
+\newcommand{\GeV}{\si{\giga\electronvolt}}
+\newcommand{\ns}{\si{\nano\second}}
+\newcommand{\us}{\si{\micro\second}}
+\newcommand{\ms}{\si{\milli\second}}
+\newcommand{\MHz}{\si{\mega\hertz}}
+\newcommand{\GHz}{\si{\giga\hertz}}
+\newcommand{\mm}{\si{\milli\meter}}
+\newcommand{\cm}{\si{\centi\meter}}
+\newcommand{\meter}{\si{\meter}}
+\newcommand{\withunit}[2]{\SI{#1}{#2}}

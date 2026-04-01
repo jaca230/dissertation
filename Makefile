@@ -1,8 +1,16 @@
 PDF=main.pdf
 
 all:
-	latexmk -pdf -synctex=1 -interaction=nonstopmode -output-directory=build src/main.tex
+	cd src && latexmk -C -output-directory=../build main.tex
+	cd src && latexmk -pdf -synctex=1 -interaction=nonstopmode -output-directory=../build main.tex
+
+playground:
+	./scripts/env/create_playground.sh
+
+examples: playground
+	$(MAKE) -C .playground all
 
 clean:
-	latexmk -C src/main.tex
+	cd src && latexmk -C -output-directory=../build main.tex
+	if [ -d .playground ]; then $(MAKE) -C .playground clean; fi
 	rm -rf build

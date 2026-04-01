@@ -3,11 +3,26 @@ channels:
   - conda-forge
 dependencies:
   - python=3.11
+  - pip
   - chktex
   - ipython
+  - ipykernel
   - jupyterlab
+  - jupytext
   - matplotlib
   - numpy
+  - openpyxl
   - pandas
+  - pillow
   - perl
+  - pyarrow
+  - pyyaml
+  - pytest
+  - ruff
   - scipy
+  - scikit-learn
+  - seaborn
+  - statsmodels
+  - sympy
+  - tabulate
+  - tqdm
