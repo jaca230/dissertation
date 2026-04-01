@@ -33,6 +33,7 @@ fi
 
 "${tinytex_bin}/tlmgr" install texcount
 "${tinytex_bin}/tlmgr" install synctex
+"${repo_root}/scripts/env/configure_vscode_settings.sh"
 
 echo "Conda env ready at: ${env_prefix}"
 echo "Activate with: conda activate ${env_name}"
