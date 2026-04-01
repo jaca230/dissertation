@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+env_name="dissertation-tools"
+conda_bin="${CONDA_EXE:-}"
+texcount_script="${HOME}/.TinyTeX/texmf-dist/scripts/texcount/texcount.pl"
+
+if [[ -z "${conda_bin}" && -x "${HOME}/miniconda3/condabin/conda" ]]; then
+  conda_bin="${HOME}/miniconda3/condabin/conda"
+fi
+
+if [[ -z "${conda_bin}" ]]; then
+  conda_bin="$(command -v conda || true)"
+fi
+
+if [[ -z "${conda_bin}" ]]; then
+  echo "conda is required but was not found on PATH." >&2
+  exit 1
+fi
+
+if [[ ! -f "${texcount_script}" ]]; then
+  echo "texcount is not installed. Run scripts/env/setup_conda_env.sh first." >&2
+  exit 1
+fi
+
+exec "${conda_bin}" run --no-capture-output -n "${env_name}" perl "${texcount_script}" "$@"

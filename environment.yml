@@ -1,0 +1,13 @@
+name: dissertation-tools
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - chktex
+  - ipython
+  - jupyterlab
+  - matplotlib
+  - numpy
+  - pandas
+  - perl
+  - scipy

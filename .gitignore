@@ -1,0 +1,47 @@
+ai_context/
+build/
+
+# LaTeX
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.ps
+*.run.xml
+*.snm
+*.synctex.gz
+*.synctex(busy)
+*.toc
+*.vrb
+*.xdv
+_minted*/
+
+# Python
+__pycache__/
+*.egg-info/
+*.py[cod]
+.ipynb_checkpoints/
+.mypy_cache/
+.nox/
+.pytest_cache/
+.ruff_cache/
+.tox/
+/.venv/
+/ENV/
+/env/
+/venv/
+
+# Editors and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
