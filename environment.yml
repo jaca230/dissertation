@@ -15,7 +15,9 @@ dependencies:
   - pandas
   - pillow
   - perl
+  - poppler
   - pyarrow
+  - pypdf
   - pyyaml
   - pytest
   - ruff

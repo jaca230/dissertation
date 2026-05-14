@@ -1,0 +1,338 @@
+\section{\texorpdfstring{Helicity Suppression in $\pi\to\ell\nu$}{Helicity Suppression in pi to l nu}}
+
+\paragraph{Negative-helicity antiparticle in the chiral basis}
+
+A negative-helicity antiparticle spinor may be written as
+\begin{align}
+v_\downarrow
+=
+\sqrt{E+m}
+\begin{pmatrix}
+\dfrac{|\mathbf{p}|}{E+m}\cos(\theta/2) \\
+\dfrac{|\mathbf{p}|}{E+m}\sin(\theta/2)e^{i\phi} \\
+\cos(\theta/2) \\
+\sin(\theta/2)e^{i\phi}
+\end{pmatrix}.
+\end{align}
+
+Choosing the momentum direction to be the \(z\)-axis (\(\theta = 0\)) givess
+\begin{align}
+v_\downarrow
+=
+\sqrt{E+m}
+\begin{pmatrix}
+\dfrac{|\mathbf{p}|}{E+m} \\
+0 \\
+1 \\
+0
+\end{pmatrix}
+\equiv
+A
+\begin{pmatrix}
+\tau \xi_R \\
+\xi_R
+\end{pmatrix},
+\end{align}
+
+where
+\begin{align}
+A = \sqrt{E+m},
+\qquad
+\tau = \frac{|\mathbf{p}|}{E+m}.
+\end{align}
+
+Projecting onto chiral components,
+\begin{align}
+v_\downarrow = P_L v_\downarrow + P_R v_\downarrow .
+\end{align}
+
+The chiral projectors are
+\begin{align}
+P_R
+=
+\frac{I_{4\times 4}+\gamma^5}{2},
+\qquad
+P_L
+=
+\frac{I_{4\times 4}-\gamma^5}{2}.
+\end{align}
+
+Using the definitions of the left- and right-chiral antiparticle states,
+\begin{align}
+P_L v_R &= v_R, \\
+P_R v_L &= v_L ,
+\end{align}
+
+one obtains
+\begin{align}
+v_\downarrow
+=
+\frac{A}{2}
+\left[
+(1-\tau)v_R
+-
+(1+\tau)v_L
+\right].
+\end{align}
+
+Equivalently,
+\begin{align}
+v_\downarrow
+=
+\frac{A}{2}
+\left[
+\left(1-\frac{|\mathbf{p}|}{E+m}\right)v_R
+-
+\left(1+\frac{|\mathbf{p}|}{E+m}\right)v_L
+\right].
+\end{align}
+
+In the limit \(m\to 0\),
+\begin{align}
+\frac{|\mathbf{p}|}{E+m} \to 1,
+\end{align}
+
+so
+\begin{align}
+v_\downarrow \to -A v_L .
+\end{align}
+
+Thus the right-chiral component of a negative-helicity antiparticle vanishes in the massless limit. Since the charged weak interaction couples to the right-chiral antiparticle component, the amplitude is suppressed by the lepton mass.
+
+\paragraph{Pion decay matrix element}
+
+For \(\pi^- \to \ell^- \bar{\nu}_\ell\), the tree-level matrix element is
+\begin{align}
+\mathcal{M}_{fi}
+=
+\left[
+\frac{g_W}{\sqrt{2}}\frac{1}{2} f_\pi p_\pi^\alpha
+\right]
+\left[
+\frac{g_{\alpha\beta}}{m_W^2}
+\right]
+\left[
+\frac{g_W}{\sqrt{2}}g_\ell
+\bar{u}(p_\ell)\gamma^\beta
+\frac{1}{2}(1-\gamma^5)v(p_\nu)
+\right].
+\end{align}
+
+In the pion rest frame, only \(p_\pi^0=m_\pi\) contributes, so
+\begin{align}
+\mathcal{M}_{fi}
+=
+\frac{g_W^2 f_\pi g_\ell}{4m_W^2}
+m_\pi
+\bar{u}(p_\ell)\gamma^0
+\frac{1}{2}(1-\gamma^5)v(p_\nu).
+\end{align}
+
+Using
+\begin{align}
+\bar{u}(p_\ell)\gamma^0
+=
+u^\dagger(p_\ell)\gamma^0\gamma^0
+=
+u^\dagger(p_\ell),
+\end{align}
+
+this becomes
+\begin{align}
+\mathcal{M}_{fi}
+=
+\frac{g_W^2 f_\pi g_\ell}{4m_W^2}
+m_\pi
+u^\dagger(p_\ell)
+\frac{1}{2}(1-\gamma^5)v(p_\nu).
+\end{align}
+
+For a nearly massless neutrino,
+\begin{align}
+\frac{1}{2}(1-\gamma^5)v(p_\nu)
+=
+v_\uparrow(p_\nu).
+\end{align}
+
+Therefore,
+\begin{align}
+\mathcal{M}_{fi}
+=
+\frac{g_W^2 f_\pi g_\ell}{4m_W^2}
+m_\pi
+u^\dagger(p_\ell)v_\uparrow(p_\nu).
+\end{align}
+
+Choosing the charged lepton to move in the \(+z\)-direction,
+\begin{align}
+u(p_\ell)
+=
+u_\uparrow(p_\ell)+u_\downarrow(p_\ell)
+=
+\sqrt{E_\ell+m_\ell}
+\left[
+\begin{pmatrix}
+1 \\
+0 \\
+\dfrac{p}{E_\ell+m_\ell} \\
+0
+\end{pmatrix}
++
+\begin{pmatrix}
+0 \\
+1 \\
+0 \\
+-\dfrac{p}{E_\ell+m_\ell}
+\end{pmatrix}
+\right].
+\end{align}
+
+The antineutrino spinor is
+\begin{align}
+v(p_\nu)
+=
+v_\uparrow(p_\nu)
+=
+\sqrt{p}
+\begin{pmatrix}
+1 \\
+0 \\
+-1 \\
+0
+\end{pmatrix}.
+\end{align}
+
+The negative-helicity charged-lepton contribution vanishes in the spinor product, leaving
+\begin{align}
+\mathcal{M}_{fi}
+=
+\frac{g_W^2 f_\pi g_\ell}{4m_W^2}
+m_\pi
+\sqrt{E_\ell+m_\ell}\sqrt{p}
+\left(
+1-\frac{p}{E_\ell+m_\ell}
+\right).
+\end{align}
+
+For \(m_\nu \simeq 0\), the two-body kinematics give
+\begin{align}
+E_\ell
+=
+\frac{m_\pi^2+m_\ell^2}{2m_\pi},
+\qquad
+p
+=
+\frac{m_\pi^2-m_\ell^2}{2m_\pi}.
+\end{align}
+
+Substituting these into the amplitude,
+\begin{align}
+\mathcal{M}_{fi}
+=
+\frac{g_W^2 f_\pi g_\ell}{4m_W^2}
+m_\pi
+\cdot
+\frac{m_\pi+m_\ell}{\sqrt{2m_\pi}}
+\cdot
+\left(
+\frac{m_\pi^2-m_\ell^2}{2m_\pi}
+\right)^{1/2}
+\cdot
+\frac{2m_\ell}{m_\pi+m_\ell}.
+\end{align}
+
+After simplification,
+\begin{align}
+\mathcal{M}_{fi}
+=
+\frac{g_W^2 f_\pi g_\ell}{4m_W^2}
+m_\ell
+\left(m_\pi^2-m_\ell^2\right)^{1/2}.
+\end{align}
+
+Thus,
+\begin{align}
+|\mathcal{M}_{fi}|^2
+=
+\left(
+\frac{g_W}{2m_W}
+\right)^4
+f_\pi^2 g_\ell^2
+m_\ell^2
+\left(m_\pi^2-m_\ell^2\right).
+\end{align}
+
+\paragraph{Decay rate}
+
+For a two-body decay,
+\begin{align}
+\Gamma(\pi \to \ell \bar{\nu}_\ell)
+=
+\frac{p|\mathcal{M}_{fi}|^2}{8\pi m_\pi^2}.
+\end{align}
+
+Using
+\begin{align}
+p
+=
+\frac{m_\pi^2-m_\ell^2}{2m_\pi},
+\end{align}
+
+the decay rate is
+\begin{align}
+\Gamma(\pi \to \ell \bar{\nu}_\ell)
+=
+\frac{f_\pi^2}{16\pi m_\pi^3}
+\left(
+\frac{g_W}{2m_W}
+\right)^4
+\left[
+m_\ell g_\ell
+\left(m_\pi^2-m_\ell^2\right)
+\right]^2 .
+\end{align}
+
+\paragraph{Tree-level ratio}
+
+Define
+\begin{align}
+R_{e/\mu}
+\equiv
+\frac{
+\Gamma(\pi^- \to e^- \bar{\nu}_e)
+}{
+\Gamma(\pi^- \to \mu^- \bar{\nu}_\mu)
+}.
+\end{align}
+
+Then
+\begin{align}
+R_{e/\mu}
+=
+\left(
+\frac{g_e}{g_\mu}
+\right)^2
+\left[
+\frac{
+m_e(m_\pi^2-m_e^2)
+}{
+m_\mu(m_\pi^2-m_\mu^2)
+}
+\right]^2 .
+\end{align}
+
+Assuming lepton flavor universality,
+\begin{align}
+g_e = g_\mu ,
+\end{align}
+
+so the tree-level prediction is
+\begin{align}
+R_{e/\mu}^{\mathrm{tree}}
+=
+\frac{m_e^2}{m_\mu^2}
+\left(
+\frac{m_\pi^2-m_e^2}
+     {m_\pi^2-m_\mu^2}
+\right)^2 .
+\end{align}

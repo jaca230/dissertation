@@ -1,0 +1,66 @@
+\section{Chirality and Helicity in the Massless Limit}
+
+The Dirac equation is
+\begin{align}
+(\gamma^\mu p_\mu - m)u(p) = 0 .
+\end{align}
+
+In the chiral basis,
+\begin{align}
+\begin{pmatrix}
+-m I_{2\times 2} & \sigma \cdot p \\
+\bar{\sigma} \cdot p & -m I_{2\times 2}
+\end{pmatrix}
+\begin{pmatrix}
+u_L \\
+u_R
+\end{pmatrix}
+= 0 .
+\end{align}
+
+Equivalently,
+\begin{align}
+(\sigma \cdot p)u_R - m u_L &= 0, \\
+(\bar{\sigma} \cdot p)u_L - m u_R &= 0 .
+\end{align}
+
+In the massless limit,
+\begin{align}
+m \to 0
+\quad\Longrightarrow\quad
+\begin{cases}
+(p^0 - \boldsymbol{\sigma}\cdot\mathbf{p})u_R = 0, \\
+(p^0 + \boldsymbol{\sigma}\cdot\mathbf{p})u_L = 0 .
+\end{cases}
+\end{align}
+
+For a massless particle, \(p^0 = |\mathbf{p}|\), so
+\begin{align}
+\frac{\boldsymbol{\sigma}\cdot\mathbf{p}}{|\mathbf{p}|}u_R &= u_R, \\
+\frac{\boldsymbol{\sigma}\cdot\mathbf{p}}{|\mathbf{p}|}u_L &= -u_L .
+\end{align}
+
+The helicity operator is
+\begin{align}
+\hat{h}
+=
+\frac{\mathbf{S}\cdot\mathbf{p}}{|\mathbf{p}|}
+=
+\frac{1}{2}
+\frac{\boldsymbol{\sigma}\cdot\mathbf{p}}{|\mathbf{p}|}.
+\end{align}
+
+Therefore,
+\begin{align}
+\hat{h}u_R &= +\frac{1}{2}u_R, \\
+\hat{h}u_L &= -\frac{1}{2}u_L .
+\end{align}
+
+Thus, for massless fermions, chirality states coincide with helicity states.
+
+Conceptually one can think of this phenomenon in terms of Lorentz boosts. 
+A massless particle always travels at the speed of light, 
+so no Lorentz boost can reverse its direction of motion. 
+Therefore, the helicity of a massless particle is Lorentz invariant and coincides with its chirality. 
+In contrast, for a massive particle, a suitable Lorentz boost can reverse its direction of motion, 
+changing its helicity while leaving its chirality unchanged.

@@ -38,6 +38,8 @@ texlive_packages=(
   texcount
   synctex
   siunitx
+  pgf
+  tikz-feynman
   mathtools
   microtype
   caption
