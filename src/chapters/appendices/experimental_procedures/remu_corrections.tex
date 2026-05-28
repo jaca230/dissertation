@@ -1,0 +1,327 @@
+\section{\texorpdfstring{\(R_{e/\mu}\) Correction Factors}{Re/mu Correction Factors}}
+\label{sec:remu-corrections}
+
+This appendix collects the correction conventions used in
+\secref{sec:measurement-strategy}. The purpose is to separate the experimental
+strategy from the algebraic bookkeeping, since additional small corrections can
+be added here as the analysis matures.
+
+\subsection{High- and Low-Energy Counts}
+\label{subsec:remu-high-low-counts}
+
+Define the reconstructed high- and low-energy samples by an energy cut
+\(E_{\mathrm{cut}}\),
+\begin{align}
+  N_H &\equiv N(E_{\mathrm{reco}}>E_{\mathrm{cut}}), &
+  N_L &\equiv N(E_{\mathrm{reco}}<E_{\mathrm{cut}}).
+\end{align}
+
+Let \(N_H^{\pi e}\) and \(N_L^{\pi e}\) denote true
+\(\pi\to e\nu\) events reconstructed above and below threshold. Similarly,
+let \(N_H^{\pi\mu}\) and \(N_L^{\pi\mu}\) denote
+\(\pi\to\mu\to e\) events reconstructed above and below threshold. The observed
+high-to-low ratio is therefore
+\begin{equation}
+  \frac{N_H}{N_L}
+  =
+  \frac{N_H^{\pi e}+N_H^{\pi\mu}}
+       {N_L^{\pi e}+N_L^{\pi\mu}} .
+  \label{eq:observed-high-low-ratio}
+\end{equation}
+
+The true branching-ratio ratio before detector effects is
+\begin{equation}
+  R_{e/\mu}^{\mathrm{true}}
+  =
+  \frac{N_H^{\pi e}+N_L^{\pi e}}
+       {N_H^{\pi\mu}+N_L^{\pi\mu}} .
+  \label{eq:true-remu-counts}
+\end{equation}
+
+The high-energy threshold is chosen so that ordinary stopped-muon Michel events
+above threshold are negligible at the required precision,
+\begin{equation}
+  N_H^{\pi\mu} \simeq 0 .
+  \label{eq:negligible-muon-leakage}
+\end{equation}
+
+With this approximation,
+\eqnref{eq:observed-high-low-ratio} becomes
+\begin{equation}
+  \frac{N_H}{N_L}
+  \simeq
+  \frac{N_H^{\pi e}}
+       {N_L^{\pi e}+N_L^{\pi\mu}},
+  \label{eq:observed-ratio-tail-approx}
+\end{equation}
+while \eqnref{eq:true-remu-counts} becomes
+\begin{equation}
+  R_{e/\mu}^{\mathrm{true}}
+  \simeq
+  \frac{N_H^{\pi e}+N_L^{\pi e}}
+       {N_L^{\pi\mu}} .
+  \label{eq:true-ratio-tail-approx}
+\end{equation}
+
+The leading difference between these expressions is the number of true
+\(\pi\to e\nu\) events reconstructed below the energy threshold.
+
+\subsection{Tail Correction}
+\label{subsec:remu-tail-correction}
+
+The observed high-to-low ratio is
+\begin{equation}
+  \frac{N_H}{N_L}
+  =
+  \frac{N_H^{\pi e}+N_H^{\pi\mu}}
+       {N_L^{\pi e}+N_L^{\pi\mu}} .
+\end{equation}
+
+The threshold is chosen so that ordinary Michel events reconstructed above the
+cut are negligible at the required precision,
+\begin{equation}
+  N_H^{\pi\mu}\simeq0 ,
+\end{equation}
+giving
+\begin{equation}
+  \frac{N_H}{N_L}
+  \simeq
+  \frac{N_H^{\pi e}}
+       {N_L^{\pi e}+N_L^{\pi\mu}} .
+  \label{eq:observed-tail-ratio}
+\end{equation}
+
+The true branching-ratio ratio is
+\begin{equation}
+  R_{e/\mu}^{\mathrm{true}}
+  =
+  \frac{N_H^{\pi e}+N_L^{\pi e}}
+       {N_H^{\pi\mu}+N_L^{\pi\mu}}
+  \simeq
+  \frac{N_H^{\pi e}+N_L^{\pi e}}
+       {N_L^{\pi\mu}} .
+\end{equation}
+
+Insert
+\begin{equation}
+  1
+  =
+  \frac{N_H/N_L}{N_H/N_L}
+\end{equation}
+to obtain
+\begin{align}
+  R_{e/\mu}^{\mathrm{true}}
+  &=
+  \left[
+    \frac{N_H}{N_L}
+    \cdot
+    \frac{N_L}{N_H}
+  \right]
+  \cdot
+  \frac{N_H^{\pi e}+N_L^{\pi e}}
+       {N_L^{\pi\mu}}
+  \\
+  &=
+  \frac{N_H}{N_L}
+  \left[
+    \frac{N_L}{N_H}
+    \cdot
+    \frac{N_H^{\pi e}+N_L^{\pi e}}
+         {N_L^{\pi\mu}}
+  \right].
+\end{align}
+
+Using
+\eqnref{eq:observed-tail-ratio},
+\begin{equation}
+  \frac{N_L}{N_H}
+  \simeq
+  \frac{N_L^{\pi e}+N_L^{\pi\mu}}
+       {N_H^{\pi e}},
+\end{equation}
+so
+\begin{align}
+  R_{e/\mu}^{\mathrm{true}}
+  &\simeq
+  \frac{N_H}{N_L}
+  \left[
+    \frac{
+      (N_L^{\pi e}+N_L^{\pi\mu})
+      (N_H^{\pi e}+N_L^{\pi e})
+    }
+    {
+      N_H^{\pi e}N_L^{\pi\mu}
+    }
+  \right]
+  \\
+  &=
+  \frac{N_H}{N_L}
+  \left[
+    \frac{
+      N_L^{\pi e}N_H^{\pi e}
+      +
+      (N_L^{\pi e})^2
+      +
+      N_L^{\pi\mu}N_H^{\pi e}
+      +
+      N_L^{\pi\mu}N_L^{\pi e}
+    }
+    {
+      N_H^{\pi e}N_L^{\pi\mu}
+    }
+  \right].
+\end{align}
+
+Dividing each term separately,
+\begin{align}
+  R_{e/\mu}^{\mathrm{true}}
+  &=
+  \frac{N_H}{N_L}
+  \Bigg[
+    \frac{N_L^{\pi e}}
+         {N_L^{\pi\mu}}
+    +
+    \frac{(N_L^{\pi e})^2}
+         {N_H^{\pi e}N_L^{\pi\mu}}
+    +
+    1
+    +
+    \frac{N_L^{\pi e}}
+         {N_H^{\pi e}}
+  \Bigg].
+\end{align}
+
+The first two correction terms are suppressed by additional factors of
+\(R_{e/\mu}\sim10^{-4}\),
+\begin{align}
+  \frac{N_L^{\pi e}}
+       {N_L^{\pi\mu}}
+  &\sim10^{-4},
+  \\
+  \frac{(N_L^{\pi e})^2}
+       {N_H^{\pi e}N_L^{\pi\mu}}
+  &\sim10^{-8},
+\end{align}
+and are therefore negligible at the required precision. Keeping only the
+leading correction term gives
+\begin{equation}
+  R_{e/\mu}^{\mathrm{true}}
+  \simeq
+  \frac{N_H}{N_L}
+  \left(
+    1+
+    \frac{N_L^{\pi e}}
+         {N_H^{\pi e}}
+  \right).
+\end{equation}
+
+Defining the tail correction
+\begin{equation}
+  C_T
+  \equiv
+  \frac{N_L^{\pi e}}
+       {N_H^{\pi e}},
+\end{equation}
+the final expression becomes
+\begin{equation}
+  R_{e/\mu}^{\mathrm{true}}
+  \simeq
+  \frac{N_H}{N_L}
+  \left(
+    1+C_T
+  \right),
+  \label{eq:tail-corrected-remu}
+\end{equation}
+before relative-acceptance effects.
+
+
+\subsection{Relative Efficiency and Acceptance}
+\label{subsec:remu-efficiency-correction}
+
+Let \(\varepsilon_H\) be the probability that a true \(\pi\to e\nu\) event is
+accepted, reconstructed, and counted in \(N_H\). Let \(\varepsilon_L\) be the
+corresponding probability for a true \(\pi\to\mu\to e\) event counted in
+\(N_L\). The relative efficiency correction is
+\begin{equation}
+  R^\varepsilon
+  \equiv
+  \frac{\varepsilon_H}{\varepsilon_L}.
+  \label{eq:relative-efficiency-definition}
+\end{equation}
+The corrected estimator is therefore
+\begin{equation}
+  R_{e/\mu}
+  \simeq
+  \frac{N_H}{N_L}
+  \left(1+C_T\right)
+  R^\varepsilon .
+  \label{eq:remu-corrected-estimator-appendix}
+\end{equation}
+
+\subsection{Angular Dependence}
+\label{subsec:remu-angular-dependence}
+
+The tail and efficiency corrections should be understood as functions of the
+positron direction. Although the detector geometry is approximately symmetric
+under rotations about the beam axis, the response is not fully uniform because
+of the forward beam entrance region, upstream material, calorimeter
+containment, reconstruction thresholds, and the directional segmentation of
+the active target planes. As a result, many quantities entering the
+\(R_{e/\mu}\) analysis depend on the reconstructed positron polar angle
+\(\theta\).
+
+A schematic angular-dependent form of the measurement is therefore
+\begin{equation}
+  R_{e/\mu}(\theta)
+  \simeq
+  \frac{N_H(\theta)}
+       {N_L(\theta)}
+  \times
+  R^\varepsilon(\theta)
+  \times
+  \left(
+    1+C_T(\theta)
+  \right),
+  \label{eq:angular-remu}
+\end{equation}
+where:
+\begin{itemize}
+  \item \(N_H(\theta)\) and \(N_L(\theta)\) are the reconstructed high- and
+  low-energy event counts,
+  \item \(C_T(\theta)\) is the low-energy
+  \(\pi\to e\nu\) tail correction,
+  \item \(R^\varepsilon(\theta)\) represents the relative efficiency and
+  acceptance correction between the direct
+  \(\pi\to e\nu\) and sequential
+  \(\pi\to\mu\to e\) channels.
+\end{itemize}
+
+In practice, the analysis is performed in finite angular bins,
+\begin{equation}
+  R_{e/\mu}
+  \simeq
+  \sum_i
+  w_i
+  \times
+  \frac{N_H^{(i)}}
+       {N_L^{(i)}}
+  \times
+  R^\varepsilon_{(i)}
+  \times
+  \left(
+    1+C_T^{(i)}
+  \right),
+  \label{eq:angular-binned-remu}
+\end{equation}
+where \(i\) labels the angular bin and the weights satisfy
+\begin{equation}
+  \sum_i w_i = 1 .
+\end{equation}
+
+This form emphasizes that the correction program is not purely an
+energy-response problem. The measured ratio also depends on geometric
+acceptance, reconstruction efficiency, and topology-dependent detector
+response, all of which vary with positron direction. Once these corrections
+are determined, their uncertainties and correlations must be propagated into
+the final \(R_{e/\mu}\) result.
+
