@@ -1,4 +1,137 @@
 \section{Detector Components}
+\label{sec:appendix-detector-components}
 
 This appendix records supplementary detector descriptions, component
 specifications, mechanical constraints, and hardware inventories.
+
+\subsection{LGAD Sensor Technology}
+\label{sec:appendix-lgad-technology}
+
+Low-gain avalanche detectors are silicon sensors designed to provide moderate
+internal charge multiplication while preserving fast timing performance. In a
+standard LGAD, a highly doped gain layer below the junction creates a localized
+high-field region. Charge carriers produced by an ionizing particle drift
+through this region and undergo controlled impact ionization, increasing the
+signal size without operating the device in Geiger mode. The resulting pulses
+are fast enough for precision time measurements and large enough to improve
+the signal-to-noise ratio for thin sensors
+\cite{Pellegrini2014LGAD,Giacomini2023LGADReview}.
+
+\begin{center}
+  \centering
+  \includegraphics[width=0.42\textwidth]{../resources/figures/appendicies/hardware/lgad_thinned_size}
+  \captionsetup{hypcap=false}
+  \captionof{figure}{Photograph of a thinned LGAD sensor developed for the ATAR R\&D
+  program. Reducing sensor thickness decreases material budget while preserving
+  precise timing performance.}
+  \label{fig:appendix-lgad-thinned-sensor}
+\end{center}
+
+For an active target, the relevant LGAD advantages are thin active material,
+fast charge collection, and timing at the \(\order{\withunit{100}{\pico\second}}\)
+scale for minimum-ionizing particles. These features are well matched to the
+PIONEER requirement to measure a pion stop, a short low-energy muon segment,
+and an outgoing positron inside the same compact detector volume. The main
+technology tradeoff is spatial segmentation. Conventional segmented LGADs can
+lose efficiency near inter-pad gaps, while AC-coupled LGADs spread the signal
+capacitively across readout electrodes and can improve fill factor and spatial
+interpolation. AC-LGAD design therefore involves optimizing gain, electrode
+pitch, resistive layer properties, capacitance, timing, and charge sharing for
+the intended readout geometry \cite{Kita2022ACLGAD,Giacomini2023LGADReview}.
+\FloatBarrier
+
+\subsection{Tracker R\&D Concepts}
+\label{sec:appendix-tracker-rd}
+
+The tracker design is still an R\&D topic, and the details are expected to
+evolve with simulations, trigger studies, and prototype measurements. The
+original detector concept used a cylindrical tracker based on micro-resistive
+WELL (\(\mu\)-RWELL) technology. A \(\mu\)-RWELL detector is a
+micro-pattern gaseous detector (MPGD) in which gas amplification occurs in a
+patterned amplification stage coupled through a resistive layer to the
+readout. Later geometry studies considered alternatives, including compact
+``bullet''-like or hemispherical tracker volumes surrounding the ATAR while
+respecting the calorimeter and beamline constraints
+\cite{pioneer_tracker_geometries,tracker_toward_pioneer_2025}.
+
+Current hardware studies include MPGD concepts such as \(\mu\)RGroove
+prototypes. Prototype detectors are being characterized with x rays to measure
+gain and gain uniformity, and available prototypes use different readout
+schemes, including \(xy\) and \(uv\) strip geometries. If an MPGD tracker is
+adopted, a \(uv\) readout scheme is attractive because it can keep the
+front-end electronics upstream of the positron acceptance. Planned test-beam
+measurements are intended to compare readout schemes and measure rate
+capability, timing resolution, and spatial resolution.
+
+Representative tracker requirements under discussion include hit resolution
+below \(\withunit{1}{\milli\meter}\), timing below
+\(\withunit{1}{\nano\second}\), efficiency above
+\(\withunit{99.5}{\percent}\) for two planes, low edge material budget, and a
+channel count compatible with trigger-path digitization. These numbers should
+be interpreted as design targets for ongoing optimization rather than final
+detector specifications \cite{atar_kpp_2025,tracker_toward_pioneer_2025}.
+\FloatBarrier
+
+\subsection{Liquid-Xenon Backup Calorimeter Concept}
+\label{sec:appendix-lxe-calorimeter}
+
+Liquid xenon is retained as an official backup calorimeter technology for
+PIONEER. Its role in the experiment is the same as the LYSO calorimeter: to
+measure positron energy and timing with high efficiency, provide a stable
+high-energy region for the \(\pi\to e\nu\) sample, and control the response
+tail that feeds events across the analysis threshold. LXe is attractive
+because it is a homogeneous scintillating medium rather than an array of
+separate crystals. The absence of internal crystal boundaries reduces
+sampling nonuniformities, and the short radiation length and small Moliere
+radius allow a compact detector with substantial shower containment. LXe also
+has high scintillation yield, about \(\withunit{46}{VUV\ photons\per\keV}\),
+and fast scintillation components, making it a credible technology for the
+energy, timing, and pileup requirements of the Phase-I \(R_{e/\mu}\)
+measurement. The current concept uses a fiducial angular coverage near
+\(\withunit{120}{\degree}\), with an LXe volume sized to provide shower
+containment comparable to the baseline calorimeter requirements
+\cite{malbrunot_lxe_overview_2025}.
+
+\begin{center}
+  \centering
+  \includegraphics[width=0.72\textwidth]{../resources/figures/appendicies/hardware/lxe_3d_render}
+  \captionsetup{hypcap=false}
+  \captionof{figure}{Conceptual rendering of a liquid-xenon calorimeter option for
+  PIONEER. The LXe concept provides a homogeneous electromagnetic calorimeter
+  around the target, with engineering studies focused on acceptance,
+  photosensor material, timing, and response tails.}
+  \label{fig:appendix-lxe-render}
+\end{center}
+
+The strongest experimental precedent is the MEG liquid-xenon calorimeter
+program, which demonstrated percent-level electromagnetic energy resolution in
+the same broad energy regime relevant for stopped-pion measurements. In a PIONEER implementation, current studies focus
+on whether an LXe volume can meet the response-tail and timing requirements
+while preserving high acceptance around the ATAR and beam entrance. A large
+prototype with roughly \(19X_{0}\) depth and \(5\) Moliere radii is under
+study to test whether the response tail and energy resolution are comparable
+to the full calorimeter in the forward direction and to measure effects such
+as photonuclear contributions to the lineshape
+\cite{malbrunot_lxe_overview_2025,suzuki_lxe_cof_mppc_2025}.
+
+The design challenges differ from those of LYSO. LXe requires cryogenic
+operation, ultraviolet-sensitive photosensors, optical windows or sensor
+packages with low material budget in the positron path, and a strategy for
+pileup separation in a detector that is not naturally segmented into crystals.
+The readout scale is also substantially larger than for the LYSO option: a
+representative LXe design uses fewer than 2000 readout channels, including
+roughly 1250 MPPC channels and 700 PMT channels, compared with about 400
+channels for the LYSO calorimeter. This increases the raw data rate and makes
+waveform handling, synchronization, and online reduction more important
+design considerations. The photosensor packaging is therefore a central part
+of the R\&D program: low-mass cold front-end and MPPC concepts are being
+studied to reduce inactive material while maintaining light collection and
+timing performance. Current studies also focus on inner photosensor
+performance for pileup identification, position reconstruction at the
+millimeter scale, angle-dependent photon-detection efficiency, diffuse
+reflection, and possible MPPC aging under VUV exposure in LXe. The LXe option
+is consequently evaluated through the same physics requirements as LYSO--energy
+response, tail fraction, timing, acceptance, and pileup separation--but with a
+different set of engineering and data-acquisition constraints
+\cite{malbrunot_lxe_overview_2025,suzuki_lxe_cof_mppc_2025}.
+\FloatBarrier

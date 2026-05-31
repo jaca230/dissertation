@@ -215,16 +215,16 @@ deadtime compatible with the DAQ design.
     samples, and prompt-tail studies while reducing the overall DAQ bandwidth.
   }
   \label{tab:pioneer-trigger-rates}
-  \begin{tabular}{lcccc}
+  \small
+  \begin{tabular}{@{}lcccp{0.33\textwidth}@{}}
     \toprule
     Trigger & Prescale & Time Range (ns) & Rate (kHz) & Primary Purpose \\
     \midrule
     PI      & 1000 & $[-300,700]$ & 0.3 & Minimum-bias monitoring sample \\
     CaloH   & 1    & $[-300,700]$ & 0.1 & High-energy \(\pi\to e\nu\)-enhanced sample \\
-    TRACK   & 50   & $[-300,700]$ & 3.4 & Broad normalization and accidental sample \\
+    TRACK   & 50   & $[-300,700]$ & 3.4 & Normalization and accidental sample \\
     PROMPT  & 1    & $[2,32]$     & 5   & Prompt-tail and early-time studies \\
     \bottomrule
   \end{tabular}
 \end{table}
-
 
