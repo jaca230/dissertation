@@ -1,6 +1,7 @@
 ai_context/
 build/
 .playground/
+.skills/
 
 # LaTeX
 *.aux

@@ -39,28 +39,6 @@ region is dominated by \(\pi\to\mu\to e\). The time spectra in the two energy re
 components from pileup, pion decays in flight, muon decays in flight, and old
 muons left from earlier pion stops \cite{pioneer_proposal_2022,pioneer_rare_2022}.
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{../resources/figures/chapters/01_introduction/ideal_positron_energy_spectra}
-    \caption{
-    Illustrative positron energy spectra for direct \(\pi\to e\nu\) decay and
-    the sequential \(\pi\to\mu\to e\) chain in an ideal detector. The dashed line marks the analysis
-    threshold separating the low-energy normalization region from the
-    high-energy signal region.
-    }
-  \label{fig:measurement-ideal-energy-spectrum}
-\end{figure}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.82\textwidth]{../resources/figures/chapters/01_introduction/timing_separation_prompt_view}
-    \caption{
-    Illustrative timing spectra for prompt \(\pi\to e\nu\) decay and the delayed
-    \(\pi\to\mu\to e\) chain.
-    }
-  \label{fig:measurement-timing-spectrum}
-\end{figure}
-
 \subsection{Corrections}
 \label{subsec:measurement-corrections}
 
@@ -95,14 +73,34 @@ probability.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\textwidth]{../resources/figures/chapters/01_introduction/positron_tail_correction}
-    \caption{
-    Illustrative low-energy response tail for \(\pi\to e\nu\) positrons.
-    Finite detector resolution and energy leakage move some signal events below
-    \(E_{\mathrm{cut}}\), where they overlap the larger
-    \(\pi\to\mu\to e\) spectrum.
-    }
-  \label{fig:measurement-positron-tail-correction}
+  \begin{subfigure}[t]{0.49\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../resources/figures/chapters/01_introduction/ideal_positron_energy_spectra}
+    \caption{Ideal energy separation.}
+    \label{fig:measurement-ideal-energy-spectrum}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.42\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../resources/figures/chapters/01_introduction/timing_separation_prompt_view}
+    \caption{Prompt and delayed timing.}
+    \label{fig:measurement-timing-spectrum}
+  \end{subfigure}
+
+  \vspace{0.6em}
+
+  \begin{subfigure}[t]{0.54\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{../resources/figures/chapters/01_introduction/positron_tail_correction}
+    \caption{Low-energy signal tail.}
+    \label{fig:measurement-positron-tail-correction}
+  \end{subfigure}
+
+  \caption{Pedagogical spectra used in the Phase-I \(R_{e/\mu}\) strategy.
+  Energy and timing separate the direct and sequential decay channels, while
+  finite calorimeter response moves some \(\pi\to e\nu\) events below
+  \(E_{\mathrm{cut}}\).}
+  \label{fig:measurement-strategy-spectra}
 \end{figure}
 
 These corrections also depend on the reconstructed positron
@@ -227,4 +225,3 @@ deadtime compatible with the DAQ design.
     \bottomrule
   \end{tabular}
 \end{table}
-
